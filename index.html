@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rom&nd</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- =================== NAV =================== -->
+      <nav id="nav">
+        <a id="logo" href="#hero"><img src="images/logo.webp" alt="romand"></a>
+        <h1 class="hidden">rom&nd</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#seasonal">Your Color</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- =================== HERO - Carousel =================== -->
+    <section id="hero">
+      <div class="hero-carousel">
+        <!-- Add your romand photos here -->
+        <div class="slide">
+          <img src="images/hero1.jpg" alt="rom&nd product flatlay" />
+        </div>
+        <div class="slide">
+          <img src="images/hero2.jpg" alt="rom&nd lip tint closeup" />
+        </div>
+        <div class="slide">
+          <img src="images/hero3.jpg" alt="rom&nd campaign shot" />
+        </div>
+      </div>
+      <div class="hero-tagline">
+        <p>Beauty is an Attitude.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <img class="about-img" src="https://placehold.co/400x400" alt="rom&nd brand image" />
+      <div class="about-text">
+        <h2>About rom&nd</h2>
+        <p>Stylized as rom&nd, South Korea-based cosmetics brand romand was founded with the input of celebrated Korean beauty influencer Saerom Min, commonly known as Gaeko.
+          Saerom Min is known for her stunning and transformative makeup techniques, which share the same philosophies as romand's products.
+          Immediately gaining popularity after launch, romand offers high-quality products that accentuate customers' unique beauty and create Instagrammable results.
+          Brand bestsellers include the Zero Gram Matte Lipstick, Zero Velvet Tint, Zero Cushion and Better Than Cheek blusher.</p>
+        <p>rom&amp;nd is a fan-driven beauty brand inspired by cosmetic lovers worldwide.
+          Together, we create beauty that connects the world and brings the joy of falling in love with beauty.</p>
+      </div>
+    </section>
+
+    <!-- =================== COLLECTION - jQuery UI Tabs + Ajax/JSON =================== -->
+    <section id="collection">
+      <h2>The Collection</h2>
+      <p class="section-sub">Explore by texture.</p>
+
+      <!-- jQuery UI tabs structure -->
+      <div id="product-tabs">
+        <ul>
+          <li><a href="#tab-juicy">Juicy</a></li>
+          <li><a href="#tab-velvet">Velvet</a></li>
+          <li><a href="#tab-fudge">Fudge</a></li>
+          <li><a href="#tab-glasting">Glasting</a></li>
+        </ul>
+
+        <!-- Tabs -->
+        <div id="tab-juicy">
+          <div class="product-card-container"></div>
+        </div>
+        <div id="tab-velvet">
+          <div class="product-card-container"></div>
+        </div>
+        <div id="tab-fudge">
+          <div class="product-card-container"></div>
+        </div>
+        <div id="tab-glasting">
+          <div class="product-card-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SEASONAL COLOR - Web Storage =================== -->
+    <section id="seasonal">
+      <h2>Find Your Season</h2>
+      <p class="section-sub">
+        Which palette suits your complexion the best? Turn off blue light filters for best color accuracy.
+      </p>
+
+      <div class="season-quiz">
+        <form id="season-form">
+          <div class="palette-options">
+
+            <label class="palette-option">
+              <input type="radio" name="season" value="Spring" />
+              <div class="palette-card spring">
+                <span>Spring</span>
+              </div>
+            </label>
+
+            <label class="palette-option">
+              <input type="radio" name="season" value="Summer" />
+              <div class="palette-card summer">
+                <span>Summer</span>
+              </div>
+            </label>
+
+            <label class="palette-option">
+              <input type="radio" name="season" value="Autumn" />
+              <div class="palette-card autumn">
+                <span>Autumn</span>
+              </div>
+            </label>
+
+            <label class="palette-option">
+              <input type="radio" name="season" value="Winter" />
+              <div class="palette-card winter">
+                <span>Winter</span>
+              </div>
+            </label>
+
+          </div>
+
+          <button type="submit" id="save-season-btn">Save My Color</button>
+        </form>
+
+        <!-- Result displayed here -->
+        <div id="season-result" class="hidden">
+          <p>You chose: <strong id="saved-season"></strong></p>
+          <p id="season-message"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+    <footer id="footer">
+      <div class="footer-inner">
+        <p class="footer-logo">rom&nd</p>
+        <nav class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#collection">Collection</a>
+          <a href="#seasonal">Your Color</a>
+        </nav>
+        <p class="footer-copy">&copy; rom&nd. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
