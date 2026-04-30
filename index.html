@@ -4,12 +4,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>rom&nd</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   </head>
 
   <body>
@@ -17,7 +32,7 @@
       <!-- =================== NAV =================== -->
       <nav id="nav">
         <a id="logo" href="#hero"><img src="images/logo.webp" alt="romand"></a>
-        <h1 class="hidden">rom&nd</h1>
+        <h1 class="sr-only">rom&nd</h1>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#collection">Collection</a></li>
@@ -26,28 +41,38 @@
       </nav>
     </header>
 
+
     <!-- =================== HERO - Carousel =================== -->
     <section id="hero">
+      <h2 class="sr-only">rom&amp;nd Beauty Hero</h2>
+
       <div class="hero-carousel">
         <!-- Add your romand photos here -->
         <div class="slide">
-          <img src="images/hero1.jpg" alt="rom&nd product flatlay" />
+          <img src="images/carousel-1.jpg" alt="An assortment of rom&nd lip products, posed in various cocktail drinks." />
         </div>
         <div class="slide">
-          <img src="images/hero2.jpg" alt="rom&nd lip tint closeup" />
+          <img src="images/carousel-2.jpg" alt="A Glasting Water Tint in a cocktail of mangoes, grapes, and raspberries." />
         </div>
         <div class="slide">
-          <img src="images/hero3.jpg" alt="rom&nd campaign shot" />
+          <img src="images/carousel-3.jpg" alt="Two Juicy Lasting Tints sitting in a glass of blueberries, raspberries, and blackberries." />
+        </div>
+        <div class="slide">
+          <img src="images/carousel-4.jpg" alt="A Dewyful Water Tint and a Juicy Lasting Tint in a glass of ice, filled with a pink ombre drink, and topped of with a bit of rosemary." />
+        </div>
+        <div class="slide">
+          <img src="images/carousel-5.jpg" alt="A Dewyful Water Tint in a wine glass of juice, topped with mangoes, grapes, and strawberries." />
         </div>
       </div>
       <div class="hero-tagline">
-        <p>Beauty is an Attitude.</p>
+        <p>The Beauty Holic's Favorite.</p>
+          <a id="btn" href="#seasonal">Take the Seasonal Quiz</a>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
-      <img class="about-img" src="https://placehold.co/400x400" alt="rom&nd brand image" />
+      <img class="about-img" src="images/about-img.jpg" alt="rom&nd brand image" />
       <div class="about-text">
         <h2>About rom&nd</h2>
         <p>Stylized as rom&nd, South Korea-based cosmetics brand romand was founded with the input of celebrated Korean beauty influencer Saerom Min, commonly known as Gaeko.
@@ -59,31 +84,36 @@
       </div>
     </section>
 
+
     <!-- =================== COLLECTION - jQuery UI Tabs + Ajax/JSON =================== -->
     <section id="collection">
       <h2>The Collection</h2>
-      <p class="section-sub">Explore by texture.</p>
+      <p class="section-tagline">Explore by texture.</p>
 
       <!-- jQuery UI tabs structure -->
       <div id="product-tabs">
+        <!-- Tab Icons -->
         <ul>
-          <li><a href="#tab-juicy">Juicy</a></li>
-          <li><a href="#tab-velvet">Velvet</a></li>
-          <li><a href="#tab-fudge">Fudge</a></li>
-          <li><a href="#tab-glasting">Glasting</a></li>
+          <li><a href="#tab-juicy"><img src="images/juicy-icon.png" alt="Juicy"></a></li>
+          <li><a href="#tab-glasting"><img src="images/glasting-icon.png" alt="Glasting"></a></li>
+          <li><a href="#tab-fudge"><img src="images/fudge-icon.png" alt="Fudge"></a></li>
+          <li><a href="#tab-velvet"><img src="images/velvet-icon.png" alt="Velvet"></a></li>
         </ul>
 
         <!-- Tabs -->
         <div id="tab-juicy">
           <div class="product-card-container"></div>
         </div>
-        <div id="tab-velvet">
+
+        <div id="tab-glasting">
           <div class="product-card-container"></div>
         </div>
+
         <div id="tab-fudge">
           <div class="product-card-container"></div>
         </div>
-        <div id="tab-glasting">
+        
+        <div id="tab-velvet">
           <div class="product-card-container"></div>
         </div>
       </div>
@@ -92,66 +122,176 @@
     <!-- =================== SEASONAL COLOR - Web Storage =================== -->
     <section id="seasonal">
       <h2>Find Your Season</h2>
-      <p class="section-sub">
-        Which palette suits your complexion the best? Turn off blue light filters for best color accuracy.
-      </p>
+      <p class="section-tagline">Take this short quiz to discover your seasonal color palette!</p>
 
-      <div class="season-quiz">
+      <div id="season-display">
+        <h3>Your Season</h3>
+        <div id="season-result-box" class="hidden">
+          <p>You previously selected:<br><br><strong id="saved-season-box"></strong></p>
+          <p id="season-message-box"></p>
+        </div>
+      </div>
+
         <form id="season-form">
+        <p class="section-sub">Which palette suits your complexion the best?</p>
+        <p class="form-note">(Turn off blue light filters for best color accuracy.)</p>
+
           <div class="palette-options">
+            <!-- The Springs 🐝🌸🪺 -->
+            <div class="season-group">
+              <label class="palette-option">
+                <input type="radio" name="season" value="True Spring" />
+                <span class="palette-card true-spring">
+                  <span>True Spring</span>
+                  <img src="images/true-spring.png" title="True Spring" alt="True Spring">
+                </span>
+              </label>
 
-            <label class="palette-option">
-              <input type="radio" name="season" value="Spring" />
-              <div class="palette-card spring">
-                <span>Spring</span>
-              </div>
-            </label>
+              <label class="palette-option">
+                <input type="radio" name="season" value="Light Spring" />
+                <span class="palette-card light-spring">
+                  <span>Light Spring</span>
+                  <img src="images/light-spring.png" title="Light Spring" alt="Light Spring">
+                </span>
+              </label>
 
-            <label class="palette-option">
-              <input type="radio" name="season" value="Summer" />
-              <div class="palette-card summer">
-                <span>Summer</span>
-              </div>
-            </label>
+              <label class="palette-option">
+                <input type="radio" name="season" value="Bright Spring" />
+                <span class="palette-card bright-spring">
+                  <span>Bright Spring</span>
+                  <img src="images/bright-spring.png" title="Bright Spring" alt="Bright Spring">
+                </span>
+              </label>
+            </div>
 
-            <label class="palette-option">
-              <input type="radio" name="season" value="Autumn" />
-              <div class="palette-card autumn">
-                <span>Autumn</span>
-              </div>
-            </label>
+            <!-- The Summers ☀️🏖️🍹 -->
+            <div class="season-group">
+              <label class="palette-option">
+                <input type="radio" name="season" value="True Summer" />
+                <span class="palette-card true-summer">
+                  <span>True Summer</span>
+                  <img src="images/true-summer.png" title="True Summer" alt="True Summer">
+                </span>
+              </label>
 
-            <label class="palette-option">
-              <input type="radio" name="season" value="Winter" />
-              <div class="palette-card winter">
-                <span>Winter</span>
-              </div>
-            </label>
+              <label class="palette-option">
+                <input type="radio" name="season" value="Light Summer" />
+                <span class="palette-card light-summer">
+                  <span>Light Summer</span>
+                  <img src="images/light-summer.png" title="Light Summer" alt="Light Summer">
+                </span>
+              </label>
 
+              <label class="palette-option">
+                <input type="radio" name="season" value="Soft Summer" />
+                <span class="palette-card soft-summer">
+                  <span>Soft Summer</span>
+                  <img src="images/soft-summer.png" title="Soft Summer" alt="Soft Summer">
+                </span>
+              </label>
+            </div>
+
+            <!-- The Autumns 🍂🍁🦃 -->
+            <div class="season-group">
+              <label class="palette-option">
+                <input type="radio" name="season" value="True Autumn" />
+                <span class="palette-card true-autumn">
+                  <span>True Autumn</span>
+                  <img src="images/true-autumn.png" title="True Autumn" alt="True Autumn">
+                </span>
+              </label>
+
+              <label class="palette-option">
+                <input type="radio" name="season" value="Dark Autumn" />
+                <span class="palette-card dark-autumn">
+                  <span>Dark Autumn</span>
+                  <img src="images/dark-autumn.png" title="Dark Autumn" alt="Dark Autumn">
+                </span>
+              </label>
+
+              <label class="palette-option">
+                <input type="radio" name="season" value="Soft Autumn" />
+                <span class="palette-card soft-autumn">
+                  <span>Soft Autumn</span>
+                  <img src="images/soft-autumn.png" title="Soft Autumn" alt="Soft Autumn">
+                </span>
+              </label>
+            </div>
+
+            <!-- The Winters ❄️☃️🧊 -->
+            <div class="season-group">
+              <label class="palette-option">
+                <input type="radio" name="season" value="True Winter" />
+                <span class="palette-card true-winter">
+                  <span>True Winter</span>
+                  <img src="images/true-winter.png" title="True Winter" alt="True Winter">
+                </span>
+              </label>
+
+              <label class="palette-option">
+                <input type="radio" name="season" value="Dark Winter" />
+                <span class="palette-card dark-winter">
+                  <span>Dark Winter</span>
+                  <img src="images/dark-winter.png" title="Dark Winter" alt="Dark Winter">
+                </span>
+              </label>
+
+              <label class="palette-option">
+                <input type="radio" name="season" value="Bright Winter" />
+                <span class="palette-card bright-winter">
+                  <span>Bright Winter</span>
+                  <img src="images/bright-winter.png" title="Bright Winter" alt="Bright Winter">
+                </span>
+              </label>
+            </div>
+            <!-- Result displayed here -->
+            <div id="season-result-form" class="hidden">
+              <p>You selected:<br><strong id="saved-season-form"></strong></p>
+              <p id="season-message-form"></p>
+            </div>
           </div>
 
           <button type="submit" id="save-season-btn">Save My Color</button>
         </form>
 
-        <!-- Result displayed here -->
-        <div id="season-result" class="hidden">
-          <p>You chose: <strong id="saved-season"></strong></p>
-          <p id="season-message"></p>
-        </div>
-      </div>
+        <form id="contact-form">
+          <h3>Curious to know more?</h3>
+          <p class="section-tagline">Save your results and recieve a free seasonal digital booklet!</p>
+          <label for="full-name">Full Name<span class="required">*</span></label>
+          <input id="full-name" type="text" required>
+          
+          <label for="email">Email<span class="required">*</span></label>
+          <input id="email" type="email" required>
+          
+          <label for="phone">Phone<span class="required">*</span></label>
+          <input id="phone" type="tel" required>
+          
+          <fieldset>
+            <legend>Preferred Contact Method<span class="required">*</span></legend>
+            
+            <input id="contact-phone" type="radio" name="contact-method" checked>
+            <label for="contact-phone">Phone</label>
+            
+            <input id="contact-email" type="radio" name="contact-method">
+            <label for="contact-email">Email</label>
+          </fieldset>
+          
+          <input id="submit" type="submit" value="Submit">
+        </form>
     </section>
 
     <!-- =================== FOOTER =================== -->
     <footer id="footer">
-      <div class="footer-inner">
-        <p class="footer-logo">rom&nd</p>
+        <a id="footer-logo" href="#hero"><img src="images/logo.webp" alt="romand"></a>
+        <h1 class="sr-only">rom&nd</h1>
         <nav class="footer-nav">
-          <a href="#about">About</a>
-          <a href="#collection">Collection</a>
-          <a href="#seasonal">Your Color</a>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#seasonal">Your Color</a></li>
+          </ul>
         </nav>
-        <p class="footer-copy">&copy; rom&nd. All rights reserved.</p>
-      </div>
+        <p class="footer-copy">2026 &copy; rom&nd Beauty Corp. All rights reserved.</p>
     </footer>
 
   </body>
