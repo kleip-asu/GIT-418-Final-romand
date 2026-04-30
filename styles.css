@@ -45,8 +45,7 @@
 }
 
 html {
-    width: 1280px;
-    justify-self: center;
+    scroll-behavior: smooth;
 }
 
 .hidden {
@@ -73,11 +72,12 @@ h3 {
 }
 
 body {
+    width: 1280px;
+    margin: 0 auto;
     background-color: var(--off-white);
-    line-height: 1.5;
+    line-height: 1.2;
     font-family: var(--font-body);
     font-size: 15px;
-    line-height: 1.2;
     color: var(--medium-gray);
 }
 
@@ -509,7 +509,10 @@ a:visited {
 
 /* Season Color Selection Form */
 #season-form input[type="radio"] {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
 }
 
 #season-form {
@@ -558,6 +561,7 @@ a:visited {
 .palette-option {
     display: flex;
     align-items: center;
+    padding: 0;
 }
 
 .palette-option:has(input:checked) .palette-card {
@@ -570,7 +574,7 @@ a:visited {
     box-shadow: 0 0 15px var(--pink-glow);
 }
 
-.palette-option span:not(.palette-card) {
+.palette-card > span {
     display: none;
 }
 
@@ -652,10 +656,6 @@ input:focus {
     outline: none;
 	border: 1px solid var(--pink-glow);
     box-shadow: 0 0 3px var(--pink-glow);
-}
-
-input:error {
-	border-color: #DE0B63;
 }
 
 

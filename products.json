@@ -2,21 +2,25 @@
     {
         "name": "Juicy",
         "image": "images/juicy-img.jpg",
+        "alt": "Juicy Lip Tint product image",
         "description": "Easily achieve sweet and delicious pouts with this vibrant lip tint available in 35 gorgeous shades. Highly pigmented, the color stays on all day long! Can be used for a gentle gradated look or eye-catching full lips."
     },
     {        
         "name": "Glasting",
         "image": "images/glasting-img.jpg",
-        "description": "romand's Glasting Color Gloss offer sheer color to lips with a high-shine finish. Infused with nourishing essential oils and high-viscosity wax, the lightweight lip gloss keeps lips moisturized without leaving a sticky feeling. Comes in thirteen shades."
+        "alt": "Glasting Color Gloss product image",
+        "description": "romand's Glasting Color Gloss offers sheer color to lips with a high-shine finish. Infused with nourishing essential oils and high-viscosity wax, the lightweight lip gloss keeps lips moisturized without leaving a sticky feeling. Comes in thirteen shades."
     },
     {        
         "name": "Fudge",
         "image": "images/fudge-img.jpg",
-        "description": "Smooth like butter, this fudge-y lip tint blends well onto lips for a matte and gradated finish. It contains macadamia integrifolia seed oil to moisturize lips. Long-lasting lip tint come in sixteen unique shades to create different kinds of lip looks!"
+        "alt": "Blur Fudge Tint product image",
+        "description": "Smooth like butter, this fudge-y lip tint blends well onto lips for a matte and gradated finish. It contains macadamia integrifolia seed oil to moisturize lips. This long-lasting lip tint comes in sixteen unique shades to create different kinds of lip looks!"
     },
     {        
         "name": "Velvet",
         "image": "images/velvet-img.webp",
+        "alt": "Zero Velvet Tint product image",
         "description": "Create a \"my lips but better\" look with this matte lip tint, which offers a blurring effect and velvet finish for a dreamy look. The lightweight texture feels soft and comfortable on skin as it adheres smoothly all day long. Comes in twenty-five shades."
     }
 ]
